@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phone Number Tracker</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="tracker.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo">
+                <i class="fas fa-phone-alt"></i>
+                <h1>Phone Tracker</h1>
+            </div>
+            <p class="subtitle">Track and validate phone numbers worldwide</p>
+        </header>
+
+        <main class="main-content">
+            <div class="tracker-card">
+                <h2>Enter Phone Number</h2>
+                <div class="input-group">
+                    <div class="input-wrapper">
+                        <i class="fas fa-mobile-alt"></i>
+                        <input 
+                            type="tel" 
+                            id="phoneInput" 
+                            placeholder="e.g., +1234567890 or 1234567890"
+                            autocomplete="off"
+                        >
+                    </div>
+                    <button id="trackBtn" class="track-btn">
+                        <i class="fas fa-search"></i>
+                        Track Number
+                    </button>
+                </div>
+                <div class="format-hint">
+                    <i class="fas fa-info-circle"></i>
+                    <span>Enter number with country code (e.g., +1 for US, +44 for UK)</span>
+                </div>
+            </div>
+
+            <div id="loadingSpinner" class="loading-spinner" style="display: none;">
+                <div class="spinner"></div>
+                <p>Tracking number...</p>
+            </div>
+
+            <div id="resultCard" class="result-card" style="display: none;">
+                <div class="result-header">
+                    <h3>Tracking Results</h3>
+                    <button id="closeResult" class="close-btn">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <div class="result-content">
+                    <div class="result-item">
+                        <i class="fas fa-phone"></i>
+                        <div class="result-details">
+                            <span class="result-label">Phone Number</span>
+                            <span id="resultNumber" class="result-value"></span>
+                        </div>
+                    </div>
+                    <div class="result-item">
+                        <i class="fas fa-check-circle"></i>
+                        <div class="result-details">
+                            <span class="result-label">Valid</span>
+                            <span id="resultValid" class="result-value"></span>
+                        </div>
+                    </div>
+                    <div class="result-item">
+                        <i class="fas fa-globe"></i>
+                        <div class="result-details">
+                            <span class="result-label">Country</span>
+                            <span id="resultCountry" class="result-value"></span>
+                        </div>
+                    </div>
+                    <div class="result-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div class="result-details">
+                            <span class="result-label">Location</span>
+                            <span id="resultLocation" class="result-value"></span>
+                        </div>
+                    </div>
+                    <div class="result-item">
+                        <i class="fas fa-building"></i>
+                        <div class="result-details">
+                            <span class="result-label">Carrier</span>
+                            <span id="resultCarrier" class="result-value"></span>
+                        </div>
+                    </div>
+                    <div class="result-item">
+                        <i class="fas fa-signal"></i>
+                        <div class="result-details">
+                            <span class="result-label">Line Type</span>
+                            <span id="resultLineType" class="result-value"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="history-section">
+                <div class="history-header">
+                    <h3>
+                        <i class="fas fa-history"></i>
+                        Tracking History
+                    </h3>
+                    <button id="clearHistory" class="clear-btn">
+                        <i class="fas fa-trash"></i>
+                        Clear All
+                    </button>
+                </div>
+                <div id="historyList" class="history-list">
+                    <div class="empty-state">
+                        <i class="fas fa-inbox"></i>
+                        <p>No tracking history yet</p>
+                        <span>Start tracking phone numbers to see them here</span>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>
+                <i class="fas fa-shield-alt"></i>
+                Phone Number Tracker - Educational purposes only
+            </p>
+            <p class="footer-note">Respects privacy and data protection regulations</p>
+        </footer>
+    </div>
+
+    <script src="tracker.js"></script>
+</body>
+</html>
