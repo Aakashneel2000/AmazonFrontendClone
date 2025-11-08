@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Index</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            width: 100%;
+        }
+
+        h1 {
+            text-align: center;
+            color: white;
+            font-size: 3rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .subtitle {
+            text-align: center;
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.2rem;
+            margin-bottom: 50px;
+        }
+
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        .project-icon {
+            font-size: 4rem;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .project-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #1f2937;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .project-description {
+            color: #6b7280;
+            line-height: 1.6;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .project-badge {
+            display: inline-block;
+            padding: 8px 16px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin: 5px;
+        }
+
+        .badges {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .cta {
+            text-align: center;
+            margin-top: 30px;
+            padding: 15px 30px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            color: white;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .project-card {
+                padding: 30px;
+            }
+
+            .project-title {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🚀 Project Portfolio</h1>
+        <p class="subtitle">Select a project to explore</p>
+
+        <div class="projects">
+            <a href="tracker.html" class="project-card">
+                <div class="project-icon">📱</div>
+                <h2 class="project-title">Phone Number Tracker</h2>
+                <p class="project-description">
+                    A modern web application for tracking and validating phone numbers worldwide. 
+                    Features include international support, tracking history, and beautiful UI.
+                </p>
+                <div class="badges">
+                    <span class="project-badge">HTML5</span>
+                    <span class="project-badge">CSS3</span>
+                    <span class="project-badge">JavaScript</span>
+                    <span class="project-badge">NEW ✨</span>
+                </div>
+            </a>
+
+            <a href="index.html" class="project-card">
+                <div class="project-icon">🛒</div>
+                <h2 class="project-title">Amazon Clone</h2>
+                <p class="project-description">
+                    A responsive clone of Amazon's homepage featuring navigation, search functionality, 
+                    product categories, and footer sections.
+                </p>
+                <div class="badges">
+                    <span class="project-badge">HTML5</span>
+                    <span class="project-badge">CSS3</span>
+                    <span class="project-badge">Responsive</span>
+                </div>
+            </a>
+        </div>
+
+        <div class="cta">
+            💡 Both projects are fully responsive and work on all devices
+        </div>
+    </div>
+</body>
+</html>
